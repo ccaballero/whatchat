@@ -12,6 +12,10 @@ header, footer {
     font-family: Century Gothic, Apple Gothic, sans-serif;
 }
 
+.message>.text>p {
+    font-family: Garamond, Hoefler Text, Times New Roman, Times, serif;
+}
+
 header {
     position: fixed;
     z-index: 10;
@@ -131,14 +135,18 @@ section {
     right: 0;
     top: 0px;
     bottom: 0px;
-    padding: 28px 0px 22px 0px;
+    padding: 28px 0px 28px 0px;
+}
+
+section:not(.active) {
+    display: none;
 }
 
 .contact {
     float: left;
     width: 100%;
     height: 85px;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border: 1px solid rgba(0,0,0,0.15);
     overflow: hidden;
 }
 
@@ -175,5 +183,54 @@ section {
 
 .contact>.description div {
     display: inline-block;
+}
+
+
+/*section:hover {
+    transform: translatex(100%);
+    transition-duration: 4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}*/
+
+.message {
+    float: left;
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.15);
+}
+
+section.active>div:last-child {
+    height: 1.0em;
+}
+
+.message>.photo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+}
+.message.left>.photo {
+    left: 0;
+}
+.message.right>.photo {
+    right: 0;
+}
+
+.message>.text {
+    float: left;
+    padding: 5px 0px;
+    margin-right: 10px;
+}
+.message.left>.text {
+    margin-left: 58px;
+}
+.message.right>.text {
+    margin-right: 58px;
+}
+
+.message>.text>p {
+    font-size: 13px;
+    line-height: 1.35em;
+    text-align: justify;
 }
 
