@@ -146,7 +146,9 @@ section:not(.active) {
     float: left;
     width: 100%;
     height: 85px;
-    border: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    margin: 1px 0px;
     overflow: hidden;
 }
 
@@ -196,7 +198,10 @@ section:not(.active) {
 .message {
     float: left;
     width: 100%;
-    border: 1px solid rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    min-height: 58px;
+    margin: 1px 0px;
 }
 
 section.active>div:last-child {
@@ -232,5 +237,6 @@ section.active>div:last-child {
     font-size: 13px;
     line-height: 1.35em;
     text-align: justify;
+    padding: 0px 5px;
 }
 
